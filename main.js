@@ -1,18 +1,15 @@
-const maxNumber=6
-let stars=""
-for (let i = 0; i < maxNumber; i ++){
-    stars = stars + "*"
-    console.log(stars)
+// Solution using one loop
+console.log("Solution using one loop:");
+for (let i = 1; i <= 6; i++) {
+    console.log("*".repeat(i));
 }
 
-let arr = [
-    ["*", "**"],
-    ["***", "****"],
-    ["*****", "******"],
-  ];
-  
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      console.log(arr[i][j]);
+// Solution using two nested loops
+console.log("Solution using two nested loops:");
+for (let i = 1; i <= 6; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "*";
     }
-  }
+    console.log(row);
+}
